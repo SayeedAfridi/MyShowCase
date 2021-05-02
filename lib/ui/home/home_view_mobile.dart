@@ -79,6 +79,27 @@ class HomeViewMobileLandscape extends StatelessWidget {
             children: [
               AppDrawer(),
               IntroCard(),
+              Expanded(
+                child: CustomScrollView(
+                  slivers: [
+                    SliverAppBar(
+                      title: Text(
+                        'My Works',
+                        style: GoogleFonts.poppins().copyWith(
+                          color: AppColor.lavender,
+                        ),
+                      ),
+                      centerTitle: true,
+                      floating: true,
+                    ),
+                    SliverList(
+                      delegate: SliverChildListDelegate.fixed(
+                        Projects.getProjects(),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         );

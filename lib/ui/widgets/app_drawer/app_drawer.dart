@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myshowcase/responsive/orientation_layout.dart';
 import 'package:myshowcase/responsive/screen_type_layout.dart';
 import 'package:myshowcase/ui/widgets/app_drawer/app_drawer_mobile.dart';
 import 'package:myshowcase/ui/widgets/app_drawer/app_drawer_model.dart';
@@ -10,7 +11,10 @@ class AppDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<AppDrawerModel>.reactive(
       builder: (context, model, child) => ScreenTypeLayout(
-        mobile: AppDrawerMobile(model: model),
+        mobile: OrientationLayout(
+          potrait: (context) => AppDrawerMobilePotrait(),
+          landscape: (context) => AppDrawerMobileLandscape(model: model),
+        ),
       ),
       viewModelBuilder: () => AppDrawerModel(),
     );
@@ -28,6 +32,7 @@ class AppDrawer extends StatelessWidget {
         title: 'Send Message',
         icon: Icons.send,
       ),
+      Divider(color: Colors.grey[400]),
       DrawerOption(
         onTap: () {},
         title: 'About',

@@ -11,7 +11,7 @@ class ProjectCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(10),
-      height: 150,
+      height: 180,
       width: double.infinity,
       decoration: BoxDecoration(
         gradient: LinearGradient(
