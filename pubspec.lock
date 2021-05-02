@@ -586,15 +586,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
-  smart_responsive:
-    dependency: "direct main"
-    description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "7ea18da74ed1015e40d031f4369127e2816976ec"
-      url: "https://github.com/sayeedafridi/smart_responsive.git"
-    source: git
-    version: "0.0.1"
   source_gen:
     dependency: transitive
     description:

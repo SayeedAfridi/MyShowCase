@@ -4,4 +4,5 @@ ThemeData kLightTheme = ThemeData(
   primarySwatch: Colors.purple,
   accentColor: AppColor.pastelOrange,
   visualDensity: VisualDensity.adaptivePlatformDensity,
+  backgroundColor: Colors.white,
 );

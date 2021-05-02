@@ -3,8 +3,8 @@ part of 'theme.dart';
 ThemeData kDarkTheme = ThemeData(
   brightness: Brightness.dark,
   primaryColor: AppColor.gunmetal,
-  accentColor: AppColor.pastelOrange,
-  backgroundColor: AppColor.independence,
+  accentColor: AppColor.independence,
+  backgroundColor: AppColor.gunmetal,
   scaffoldBackgroundColor: AppColor.gunmetal,
   floatingActionButtonTheme: kFabDarkTheme,
   visualDensity: VisualDensity.adaptivePlatformDensity,

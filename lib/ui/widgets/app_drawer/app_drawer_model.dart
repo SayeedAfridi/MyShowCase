@@ -1,20 +1,19 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myshowcase/app/app.locator.dart';
-import 'package:myshowcase/app/app.logger.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
-class HomeViewModel extends BaseViewModel {
-  final log = getLogger('HomeViewModel');
+class AppDrawerModel extends BaseViewModel {
   final themeService = locator<ThemeService>();
   IconData? _icon;
 
-  HomeViewModel() {
+  AppDrawerModel() {
     _icon = themeService.isDarkMode ? Icons.wb_cloudy : Icons.wb_sunny;
   }
 
   IconData get icon => _icon!;
+
+  bool get isDarkMode => themeService.isDarkMode;
 
   void toggleTheme() {
     themeService.toggleDarkLightTheme();
